@@ -2,7 +2,7 @@
     <div class="contract">
         <el-card class="box-card">
             <div slot="header" class="clearfix">
-                <span>远信市场开发代理合同</span>
+                <span class="explain">远信市场开发代理合同</span>
             </div>
             <div class="text item">
                 <el-row>
@@ -272,7 +272,7 @@ export default {
 }
 
 .text {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .item {
@@ -302,7 +302,8 @@ export default {
     padding: 20px 50px;
 }
 
-.select > .el-row {
-    text-indent: 50px !important;
+.explain {
+    font-size: 28px;
+    padding: 20px;
 }
 </style>

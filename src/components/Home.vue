@@ -61,8 +61,7 @@ export default {
     data() {
         return {
             imgList: [
-                { id: 0, idView: require("../assets/lunbo.png") }
-                // { id: 1, idView: require("../assets/lunbo2.png") }
+                { id: 0, idView: require("../assets/lunbo1.png") }
             ],
             screenWidth: document.documentElement.clientWidth,
             imgHeight: "",
@@ -124,7 +123,12 @@ export default {
     watch: {
         screenWidth: function() {
             this.imgHeight = Number(this.$refs.imgHeight[0].height) + "px";
-        }
+            if(this.screenWidth<1200){
+                this.isCorrectSize=false
+            }else if(this.screenWidth>1200){
+                this.isCorrectSize=true
+            }
+        },
     },
     mounted() {
         var _this = this;
@@ -199,12 +203,11 @@ export default {
 }
 
 .taga {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .bottom-left {
     width: 50%;
-    /* height: 150px; */
     line-height: 120px;
     float: left;
     color: #b3b3b3;
@@ -215,7 +218,6 @@ export default {
 }
 .bottom-right {
     width: 50%;
-    /* height: 150px; */
     line-height: 120px;
     float: right;
     color: #b3b3b3;
@@ -277,10 +279,11 @@ export default {
 .catchline {
     padding: 10px 0 0 0;
     text-align: left;
+    font-size: 20px;
 }
 
 .catchlinea {
-    font-size: 14px;
+    font-size: 16px;
     padding-top: 14px;
 }
 
@@ -289,25 +292,7 @@ export default {
 }
 
 .hrlengtha {
-    width: 320px;
-}
-</style>
-
-<style>
-.el-carousel__item h3 {
-    color: #475669;
-    font-size: 14px;
-    opacity: 0.75;
-    line-height: 150px;
-    margin: 0;
-}
-
-.el-carousel__item:nth-child(2n) {
-    background-color: #99a9bf;
-}
-
-.el-carousel__item:nth-child(2n + 1) {
-    background-color: #d3dce6;
+    width: 346px;
 }
 </style>
 

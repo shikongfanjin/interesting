@@ -6,13 +6,13 @@
         <el-collapse>
             <el-collapse-item title="一、项目能为代理商带来的价值" name="1" class="title">
                 <div>1、经济效益</div>
-                <div>一个三人团队的代理商在一个地级代理区一年的收入预算为182万元（见本说明第九条的详细计算）。</div>
-                <div>一个代理商建立一个十人团队，可以选择三个代理区进行代理合作，这样，其年度预算收入为546万元。</div>
-                <div>包含用户推广代理酬金、产品配件代销收益、平台广告招揽代理酬金。</div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一个三人团队的代理商在一个地级代理区一年的收入预算为182万元（见本说明第九条的详细计算）。</div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一个代理商建立一个十人团队，可以选择三个代理区进行代理合作，这样，其年度预算收入为546万元。</div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;包含用户推广代理酬金、产品配件代销收益、平台广告招揽代理酬金。</div>
                 <div>2、市场新机遇</div>
-                <div>随着项目的推广，一个有着精准专业性，且规模巨大的用户群体即将形成，可以支撑系统良好的广告价值，附带的电商平台可以形成大量的高效线上交易。</div>
-                <div>代理商可以在电商商户入住招揽中形成代理收益。</div>
-                <div>为代理商发展新型服务业务提供良好的市场先机。</div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;随着项目的推广，一个有着精准专业性，且规模巨大的用户群体即将形成，可以支撑系统良好的广告价值，附带的电商平台可以形成大量的高效线上交易。</div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;代理商可以在电商商户入住招揽中形成代理收益。</div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为代理商发展新型服务业务提供良好的市场先机。</div>
             </el-collapse-item>
             <el-collapse-item title="二、代理商合作政策" name="2" class="title">
                 <div>1、代理商酬金线上按月结算，线下按月支付</div>
@@ -20,11 +20,11 @@
                 <div>3、代理商分销产品配件每件允许加价5-10元（运营方不接受1000件以下的采购订单）</div>
                 <div>4、为代理商的全部相关员工提供相关培训</div>
                 <div>5、代理商的保证金</div>
-                <div>一个代理商缴纳的保证金为其年度预算收入的3%左右。</div>
-                <div>代理商的年度预算收入=代理商年度终端账户开发工作指标*250元*0.3+代理商年度终端账户开发工作指标*5元（产品配件代销收益）+代理区年度招揽广告业务工作指标*0.5+代理区电商平台入住商户开发年度提成收入</div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一个代理商缴纳的保证金为其年度预算收入的3%左右。</div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;代理商的年度预算收入=代理商年度终端账户开发工作指标*250元*0.3+代理商年度终端账户开发工作指标*5元（产品配件代销收益）+代理区年度招揽广告业务工作指标*0.5+代理区电商平台入住商户开发年度提成收入</div>
                 <div>6、代理商保证金的使用</div>
-                <div>保证金用于保证代理商的合规合法经营。违规违法经营，或未能完成工作指标的20%的，扣除部分保证金，直至终止代理权，解除合同。代理商的经营行为造成较大经济损失和较大负面社会影响，保证金不足以偿付损失的，代理商另行赔付。</div>
-                <div>具体内容见《远信市场开发代理合同》。</div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;保证金用于保证代理商的合规合法经营。违规违法经营，或未能完成工作指标的20%的，扣除部分保证金，直至终止代理权，解除合同。代理商的经营行为造成较大经济损失和较大负面社会影响，保证金不足以偿付损失的，代理商另行赔付。</div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;具体内容见《远信市场开发代理合同》。</div>
             </el-collapse-item>
             <el-collapse-item title="三、代理商准入条件" name="3" class="title">
                 <div>1、信誉良好的法人实体，或信誉良好的拟创业个人。</div>
@@ -158,8 +158,8 @@ export default {
 }
 
 .explain {
-    font-size: 32px;
-    padding: 30px;
+    font-size: 28px;
+    padding: 20px;
 }
 </style>
 
