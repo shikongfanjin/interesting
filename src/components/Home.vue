@@ -7,23 +7,24 @@
                         <img src="../assets/logo1.png" alt="" height="120px">
                     </div>
                     <div class="word">
-                        <div class="catchline" :class="classObject.catchlinea">遥可及 远可信</div>
-                        <div class="catchline" :class="classObject.catchlinea">实现作业管理的远程化、透明化</div>
+                        <div :class="[isCorrectSize ? classObject.catchline : classObject.catchlinea]">遥可及 远可信</div>
+                        <div :class="[isCorrectSize ? classObject.catchline : classObject.catchlinea]">实现作业管理的远程化、透明化</div>
                     </div>
                 </div>
                 <div class="head-right" :class="classObject.headright">
                     <div :class="[isCorrectSize ? classObject.hrlength.hrlength : classObject.hrlength.hrlengtha]">
                         <el-menu default-active="1" class="el-menu-demo" mode="horizontal">
-                            <el-menu-item index="1" :class="classObject.taga" @click="toShow(1)">首页</el-menu-item>
-                            <el-menu-item index="2" :class="classObject.taga" @click="toShow(2)">代理招商说明</el-menu-item>
-                            <el-menu-item index="3" :class="classObject.taga" @click="toShow(3)">代理合同文本</el-menu-item>
+                            <el-menu-item index="1" :class="[isCorrectSize ? classObject.tag : classObject.taga]" @click="toShow(1)">首页</el-menu-item>
+                            <el-menu-item index="2" :class="[isCorrectSize ? classObject.tag : classObject.taga]" @click="toShow(2)">产品介绍</el-menu-item>
+                            <el-menu-item index="3" :class="[isCorrectSize ? classObject.tag : classObject.taga]" @click="toShow(3)">招商说明</el-menu-item>
+                            <el-menu-item index="4" :class="[isCorrectSize ? classObject.tag : classObject.taga]" @click="toShow(4)">联系我们</el-menu-item>
                         </el-menu>
                     </div>
                 </div>
             </div>
         </el-header>
         <div class="center">
-            <el-carousel :height="imgHeight" arrow="never">
+            <el-carousel :height="imgHeight">
                 <el-carousel-item v-for="item in imgList" :key="item.id">
                     <img ref="imgHeight" :src="item.idView" width="100%" />
                 </el-carousel-item>
@@ -38,8 +39,8 @@
             </div>
             <div class="bottom-right">
                 <div class="center-content">
-                    <img src="../assets/tel.png" alt="" width="30px">
-                    <span>+021 56563252</span>
+                    <!-- <img src="../assets/tel.png" alt="" width="30px">
+                    <span>+021 56563252</span> -->
                 </div>
             </div>
         </div>
@@ -48,33 +49,36 @@
 
 <script>
 import Business from "./Business";
-import Contract from "./Contract";
+// import Contract from "./Contract";
 import Introduce from "./Introduce";
+import Product from "./Product";
+import Connection from "./Connection";
 
 export default {
     name: "Home",
     components: {
         Introduce,
         Business,
-        Contract
+        // Contract,
+        Product,
+        Connection
     },
     data() {
         return {
             imgList: [
-                { id: 0, idView: require("../assets/lunbo1.png") }
+                { id: 0, idView: require("../assets/lunbo3.png") },
+                { id: 1, idView: require("../assets/lunbo2.png") },
+                { id: 2, idView: require("../assets/lunbo1.png") }
             ],
             screenWidth: document.documentElement.clientWidth,
             imgHeight: "",
             isShow: Introduce,
             isCorrectSize: true,
             classObject: {
-                catchlinea: {
-                    catchlinea: false
-                },
-                taga: {
-                    tag: true,
-                    taga: false
-                },
+                catchline: "catchline",
+                catchlinea: "catchlinea",
+                tag: "tag",
+                taga: "taga",
                 headright: {
                     headright: false
                 },
@@ -100,9 +104,6 @@ export default {
             }, 100);
             if (document.documentElement.clientWidth < 1201) {
                 this.isCorrectSize = false;
-                this.classObject.catchlinea.catchlinea = true;
-                this.classObject.taga.tag = false;
-                this.classObject.taga.taga = true;
                 this.classObject.headright.headright = true;
                 this.classObject.bcname.bottomcompanyname = false;
                 this.classObject.bcname.bcname = true;
@@ -111,24 +112,30 @@ export default {
             }
         },
         toShow(val) {
-            if (val === 1) {
-                this.isShow = Introduce;
-            } else if (val === 2) {
-                this.isShow = Business;
-            } else {
-                this.isShow = Contract;
+            switch (val) {
+                case 1:
+                    this.isShow = Introduce;
+                    break;
+                case 2:
+                    this.isShow = Product;
+                    break;
+                case 3:
+                    this.isShow = Business;
+                    break;
+                case 4:
+                    this.isShow = Connection;
             }
         }
     },
     watch: {
         screenWidth: function() {
             this.imgHeight = Number(this.$refs.imgHeight[0].height) + "px";
-            if(this.screenWidth<1200){
-                this.isCorrectSize=false
-            }else if(this.screenWidth>1200){
-                this.isCorrectSize=true
+            if (this.screenWidth < 1200) {
+                this.isCorrectSize = false;
+            } else if (this.screenWidth > 1200) {
+                this.isCorrectSize = true;
             }
-        },
+        }
     },
     mounted() {
         var _this = this;
@@ -284,15 +291,16 @@ export default {
 
 .catchlinea {
     font-size: 16px;
+    text-align: left;
     padding-top: 14px;
 }
 
 .hrlength {
-    width: 555px;
+    width: 640px;
 }
 
 .hrlengtha {
-    width: 346px;
+    width: 384px;
 }
 </style>
 

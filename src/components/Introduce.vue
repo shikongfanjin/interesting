@@ -3,15 +3,15 @@
         <div class="companyIntroduce">
             <div class="introduceContent">
                 <div :class="[isCorrectSize ? classObject.companyprofile : classObject.companyprofilea]" style="padding:30px 0 0 0">
-                    <span :class="[isCorrectSize ? classObject.companyname : classObject.companynamea]">上海见慧企业发展有限公司</span> 成立于2016年5月，致力于生产过程智能化和生产管理互联网化的研究和市场发展工作。
+                    <span :class="[isCorrectSize ? classObject.companyname : classObject.companynamea]">上海见慧企业发展有限公司</span> 致力于生产过程智能化和生产管理互联网化的研究和市场发展工作。
                 </div>
                 <div :class="[isCorrectSize ? classObject.companyprofile : classObject.companyprofilea]" style="padding:10px">
-                    2018年7月，公司研究团队瞄准单人分散作业相关行业存在的管理难题，开展了大量研究和产品开发工作，打造了工业互联网概念产品“远信”。
+                    公司研究团队瞄准单人分散作业相关行业存在的管理难题，打造工业互联网概念产品“远信”。
                 </div>
-                <div :class="[isCorrectSize ? classObject.companyprofile : classObject.companyprofilea]" style="padding:15px">
+                <div :class="[isCorrectSize ? classObject.teamvision : classObject.teamvisiona]" style="padding:15px;">
                     团队愿景：智创未来，助力发展
                 </div>
-                <div :class="[isCorrectSize ? classObject.companyprofile : classObject.companyprofilea]" style="padding:0 0 25px 0">
+                <div :class="[isCorrectSize ? classObject.companyprofile : classObject.companyprofilea]" style="padding:0 0 25px 0;">
                     公司价值观：服务大众，成就自我
                 </div>
             </div>
@@ -26,7 +26,7 @@
                 远程监督 + 远程协助 + 远程会议 + 实时对讲 =
                 <span style="font-size:36px;color:black;font-weight:600;border-bottom:5px solid #959595">远 信</span>
             </div>
-            <div style="padding:5px 20%">
+            <!-- <div style="padding:5px 20%">
                 <el-collapse>
                     <el-collapse-item title="一、	产品定位" name="1" class="title">
                         <div>1、基于移动终端和智能云端的对单人分散作业的远程透明化管理工具</div>
@@ -70,7 +70,7 @@
                         </el-table>
                     </el-collapse-item>
                 </el-collapse>
-            </div>
+            </div> -->
         </div>
     </div>
 </template>
@@ -108,7 +108,11 @@ export default {
                 companyprofile: "companyprofile",
                 companyprofilea: "companyprofilea",
                 companyname: "companyname",
-                companynamea: "companynamea"
+                companynamea: "companynamea",
+                teamvision: "teamvision",
+                teamvisiona: "teamvisiona",
+                corporategoal: "corporategoal",
+                corporategoala: "corporategoala"
             }
         };
     },
@@ -158,6 +162,34 @@ export default {
 
 .companynamea {
     font-size: 20px;
+}
+
+.teamvision {
+    font-size: 22px;
+    text-align-last: justify;
+    width: 360px;
+    margin: auto;
+}
+
+.teamvisiona {
+    font-size: 15px;
+    text-align-last: justify;
+    width: 253px;
+    margin: auto;
+}
+
+.corporategoal {
+    font-size: 24px;
+    text-align-last: justify;
+    width: 360px;
+    margin: auto;
+}
+
+.corporategoala {
+    font-size: 20px;
+    text-align-last: justify;
+    width: 360px;
+    margin: auto;
 }
 </style>
 
