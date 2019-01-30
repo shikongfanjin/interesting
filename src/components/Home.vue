@@ -18,6 +18,7 @@
                             <el-menu-item index="2" :class="[isCorrectSize ? classObject.tag : classObject.taga]" @click="toShow(2)">产品介绍</el-menu-item>
                             <el-menu-item index="3" :class="[isCorrectSize ? classObject.tag : classObject.taga]" @click="toShow(3)">招商说明</el-menu-item>
                             <el-menu-item index="4" :class="[isCorrectSize ? classObject.tag : classObject.taga]" @click="toShow(4)">联系我们</el-menu-item>
+                            <el-menu-item index="5" :class="[isCorrectSize ? classObject.tag : classObject.taga]" @click="toJump()">登录</el-menu-item>
                         </el-menu>
                     </div>
                 </div>
@@ -102,7 +103,7 @@ export default {
             setTimeout(() => {
                 this.imgHeight = Number(this.$refs.imgHeight[0].height) + "px";
             }, 100);
-            if (document.documentElement.clientWidth < 1201) {
+            if (document.documentElement.clientWidth < 1370) {
                 this.isCorrectSize = false;
                 this.classObject.headright.headright = true;
                 this.classObject.bcname.bottomcompanyname = false;
@@ -125,14 +126,17 @@ export default {
                 case 4:
                     this.isShow = Connection;
             }
+        },
+        toJump(){
+            window.open("http://eff.xmidware.com/eff/")
         }
     },
     watch: {
         screenWidth: function() {
             this.imgHeight = Number(this.$refs.imgHeight[0].height) + "px";
-            if (this.screenWidth < 1200) {
+            if (this.screenWidth < 1370) {
                 this.isCorrectSize = false;
-            } else if (this.screenWidth > 1200) {
+            } else if (this.screenWidth > 1370) {
                 this.isCorrectSize = true;
             }
         }
@@ -296,11 +300,11 @@ export default {
 }
 
 .hrlength {
-    width: 640px;
+    width: 770px;
 }
 
 .hrlengtha {
-    width: 384px;
+    width: 460px;
 }
 </style>
 
