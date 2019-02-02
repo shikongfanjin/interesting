@@ -7,8 +7,8 @@
                         <img src="../assets/logo1.png" alt="" height="120px">
                     </div>
                     <div class="word">
-                        <div :class="[isCorrectSize ? classObject.catchline : classObject.catchlinea]">遥可及 远可信</div>
-                        <div :class="[isCorrectSize ? classObject.catchline : classObject.catchlinea]">实现作业管理的远程化、透明化</div>
+                        <!-- <div :class="[isCorrectSize ? classObject.catchline : classObject.catchlinea]">遥可及 远可信</div> -->
+                        <div :class="[isCorrectSize ? classObject.catchline : classObject.catchlinea]">第五大社会沟通体系</div>
                     </div>
                 </div>
                 <div class="head-right" :class="classObject.headright">
@@ -40,6 +40,7 @@
             </div>
             <div class="bottom-right">
                 <div class="center-content">
+                    备案/许可证编号为：沪ICP备19003350号
                     <!-- <img src="../assets/tel.png" alt="" width="30px">
                     <span>+021 56563252</span> -->
                 </div>
@@ -67,8 +68,8 @@ export default {
     data() {
         return {
             imgList: [
-                { id: 0, idView: require("../assets/lunbo3.png") },
-                { id: 1, idView: require("../assets/lunbo2.png") },
+                { id: 0, idView: require("../assets/lunbo4.png") },
+                { id: 1, idView: require("../assets/lunbo5.png") },
                 { id: 2, idView: require("../assets/lunbo1.png") }
             ],
             screenWidth: document.documentElement.clientWidth,
@@ -182,7 +183,7 @@ export default {
 
 .head-left {
     float: left;
-    padding-left: 70px;
+    padding-left: 3%;
     width: 50%;
     height: 120px;
 }
@@ -191,7 +192,7 @@ export default {
     float: right;
     width: 50%;
     height: 120px;
-    padding: 35px 0 0 35px;
+    padding: 28px 0 0 35px;
 }
 
 .headright {
@@ -205,7 +206,8 @@ export default {
 .word {
     height: 120px;
     font-size: 20px;
-    padding-top: 20px;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .tag {
@@ -224,7 +226,7 @@ export default {
     color: #b3b3b3;
     font-size: 20px;
     font-family: "YaHei UI";
-    padding-right: 30px;
+    padding-right: 10%;
     text-align: right;
 }
 .bottom-right {
@@ -288,15 +290,13 @@ export default {
 }
 
 .catchline {
-    padding: 10px 0 0 0;
     text-align: left;
-    font-size: 20px;
+    font-size: 40px;
 }
 
 .catchlinea {
-    font-size: 16px;
+    font-size: 34px;
     text-align: left;
-    padding-top: 14px;
 }
 
 .hrlength {

@@ -9,7 +9,7 @@
                     <div style="height:45px;border-bottom:solid 2px black">&nbsp;</div>
                 </el-col>
                 <el-col :span="6">
-                    <div style="font-size:32px;padding:20px 0 0 0;font-weight:600">"远信"&nbsp;&nbsp;&nbsp;&nbsp;解决问题的方案</div>
+                    <div :class="[isCorrectSize ? classObject.programme : classObject.programmea]">"远信"&nbsp;&nbsp;&nbsp;&nbsp;解决问题的方案</div>
                 </el-col>
                 <el-col :span="8">
                     <div style="height:45px;border-bottom:solid 2px black">&nbsp;</div>
@@ -91,7 +91,7 @@ export default {
                         "别针式指环挂扣，使沟通的设备和体系不影响劳作者的作业过程"
                 },
                 {
-                    imgUrl: require("../assets/picture3.jpg"),
+                    imgUrl: require("../assets/picture3.png"),
                     imgMessage:
                         "终端app自动采集劳作图片及其他实时信息，并自动上传云端提供监督依据"
                 },
@@ -131,9 +131,14 @@ export default {
                     leader: "1",
                     groupper: "≦3"
                 }
-            ]
+            ],
+            classObject:{
+                programme:'programme',
+                programmea:'programmea'
+            }
         };
     },
+    props: ["isCorrectSize"],
     methods: {},
     mounted() {}
 };
@@ -171,5 +176,17 @@ export default {
     text-align: left;
     padding-left: 20%;
     font-size: 15px;
+}
+
+.programme {
+    font-size: 32px;
+    padding: 20px 0 0 0;
+    font-weight: 600;
+}
+
+.programmea {
+    font-size: 26px;
+    padding: 20px 0 0 0;
+    font-weight: 600;
 }
 </style>
